@@ -1,0 +1,121 @@
+{{ 'petventra-comparison.css' | asset_url | stylesheet_tag }}
+
+<div class="petventra-comparison page-width">
+  {% if section.settings.heading != blank %}
+    <h2 class="petventra-comparison__heading">{{ section.settings.heading }}</h2>
+  {% endif %}
+  {% if section.settings.intro != blank %}
+    <div class="petventra-comparison__intro">{{ section.settings.intro }}</div>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="petventra-comparison__table-wrapper">
+      <table class="petventra-comparison__table">
+        <thead>
+          <tr>
+            <th class="petventra-comparison__th petventra-comparison__th--feature"></th>
+            <th class="petventra-comparison__th petventra-comparison__th--petventra">
+              {{ section.settings.petventra_label | default: 'Petventra' }}
+            </th>
+            <th class="petventra-comparison__th">
+              {{ section.settings.competitor_label | default: 'Coleira tradicional' }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for block in section.blocks %}
+            <tr {{ block.shopify_attributes }}>
+              <td class="petventra-comparison__td petventra-comparison__td--feature">{{ block.settings.feature }}</td>
+              <td class="petventra-comparison__td petventra-comparison__td--petventra">
+                {% if block.settings.petventra_value %}
+                  <span class="petventra-comparison__icon petventra-comparison__icon--yes" aria-label="Sim">✓</span>
+                {% else %}
+                  <span class="petventra-comparison__icon petventra-comparison__icon--no" aria-label="Não">✕</span>
+                {% endif %}
+              </td>
+              <td class="petventra-comparison__td">
+                {% if block.settings.competitor_value %}
+                  <span class="petventra-comparison__icon petventra-comparison__icon--yes" aria-label="Sim">✓</span>
+                {% else %}
+                  <span class="petventra-comparison__icon petventra-comparison__icon--no" aria-label="Não">✕</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Petventra Comparison",
+  "tag": "section",
+  "class": "petventra-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Porque escolher Petventra"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro text",
+      "default": "<p>Compara com uma coleira tradicional e vê a diferença.</p>"
+    },
+    {
+      "type": "text",
+      "id": "petventra_label",
+      "label": "Petventra column label",
+      "default": "Petventra"
+    },
+    {
+      "type": "text",
+      "id": "competitor_label",
+      "label": "Competitor column label",
+      "default": "Coleira tradicional"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "comparison_row",
+      "name": "Comparison row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Feature",
+          "default": "GPS em tempo real"
+        },
+        {
+          "type": "checkbox",
+          "id": "petventra_value",
+          "label": "Petventra has this",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "competitor_value",
+          "label": "Competitor has this",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Petventra Comparison",
+      "blocks": [
+        { "type": "comparison_row", "settings": { "feature": "GPS em tempo real", "petventra_value": true, "competitor_value": false } },
+        { "type": "comparison_row", "settings": { "feature": "Alertas de fuga", "petventra_value": true, "competitor_value": false } },
+        { "type": "comparison_row", "settings": { "feature": "Resistente à água (IP67)", "petventra_value": true, "competitor_value": false } },
+        { "type": "comparison_row", "settings": { "feature": "App gratuita", "petventra_value": true, "competitor_value": false } },
+        { "type": "comparison_row", "settings": { "feature": "Histórico de percursos", "petventra_value": true, "competitor_value": false } }
+      ]
+    }
+  ]
+}
+{% endschema %}

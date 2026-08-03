@@ -1,0 +1,58 @@
+{{ 'petventra-trust-features.css' | asset_url | stylesheet_tag }}
+
+<div class="petventra-trust page-width">
+  {% if section.blocks.size > 0 %}
+    <div class="petventra-trust__grid">
+      {% for block in section.blocks %}
+        <div class="petventra-trust__item" {{ block.shopify_attributes }}>
+          {% if block.settings.icon != blank %}
+            <span class="petventra-trust__icon" aria-hidden="true">{{ block.settings.icon }}</span>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <span class="petventra-trust__title">{{ block.settings.title }}</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Petventra Trust Features",
+  "tag": "section",
+  "class": "petventra-section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Trust feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "✅"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Garantia de 30 dias"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Petventra Trust Features",
+      "blocks": [
+        { "type": "feature", "settings": { "icon": "🛡️", "title": "Garantia de 30 dias" } },
+        { "type": "feature", "settings": { "icon": "🚚", "title": "Envio grátis 24-48h" } },
+        { "type": "feature", "settings": { "icon": "💬", "title": "Suporte 7 dias por semana" } },
+        { "type": "feature", "settings": { "icon": "⭐", "title": "+10.000 clientes satisfeitos" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -28,6 +28,19 @@
           <div class="petventra-testimonials__author">
             {% if block.settings.avatar != blank %}
               {{ block.settings.avatar | image_url: width: 96 | image_tag: loading: 'lazy', class: 'petventra-testimonials__avatar' }}
+            {% else %}
+              {% liquid
+                assign avatar_index = forloop.index0 | modulo: 3 | plus: 1
+                assign fallback_avatar = 'petventra-testimonial-' | append: avatar_index | append: '.jpg'
+              %}
+              <img
+                src="{{ fallback_avatar | asset_url }}"
+                alt="{{ block.settings.author | escape }}"
+                loading="lazy"
+                class="petventra-testimonials__avatar"
+                width="96"
+                height="96"
+              >
             {% endif %}
             {% if block.settings.author != blank %}
               <span class="petventra-testimonials__author-name">{{ block.settings.author }}</span>

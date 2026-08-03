@@ -1,0 +1,103 @@
+{{ 'petventra-newsletter.css' | asset_url | stylesheet_tag }}
+
+<div class="petventra-newsletter" style="--petventra-newsletter-bg: {{ section.settings.background_color }};">
+  <div class="petventra-newsletter__container page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="petventra-newsletter__heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <div class="petventra-newsletter__subheading">{{ section.settings.subheading }}</div>
+    {% endif %}
+
+    {% form 'customer', class: 'petventra-newsletter__form' %}
+      <input type="hidden" name="contact[tags]" value="newsletter,petventra">
+
+      <div class="petventra-newsletter__input-group">
+        <label for="PetventraNewsletterEmail-{{ section.id }}" class="visually-hidden">
+          {{ 'blocks.email_signup.label' | t: default: 'Email' }}
+        </label>
+        <input
+          id="PetventraNewsletterEmail-{{ section.id }}"
+          class="petventra-newsletter__input"
+          type="email"
+          name="contact[email]"
+          autocorrect="off"
+          autocapitalize="off"
+          autocomplete="email"
+          placeholder="{{ section.settings.placeholder | default: 'O teu email' }}"
+          required
+          {% if form.errors %}
+            aria-invalid="true"
+            aria-describedby="PetventraNewsletterError-{{ section.id }}"
+          {% endif %}
+        >
+        <button type="submit" class="petventra-newsletter__button">
+          {{ section.settings.button_label | default: 'Subscrever' }}
+        </button>
+      </div>
+
+      {% if form.errors %}
+        <p id="PetventraNewsletterError-{{ section.id }}" class="petventra-newsletter__message petventra-newsletter__message--error">
+          {{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}
+        </p>
+      {% endif %}
+
+      {% if form.posted_successfully? %}
+        <p class="petventra-newsletter__message petventra-newsletter__message--success">
+          {{ section.settings.success_text | default: 'Obrigado! Já estás na lista.' }}
+        </p>
+      {% endif %}
+    {% endform %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Petventra Newsletter",
+  "tag": "section",
+  "class": "petventra-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Fica a par de novidades e promoções"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Subscreve e recebe um desconto exclusivo na tua primeira compra.</p>"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Input placeholder",
+      "default": "O teu email"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Subscrever"
+    },
+    {
+      "type": "text",
+      "id": "success_text",
+      "label": "Success message",
+      "default": "Obrigado! Já estás na lista."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f5f6f4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Petventra Newsletter"
+    }
+  ]
+}
+{% endschema %}

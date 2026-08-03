@@ -1,0 +1,28 @@
+.petventra-trust {
+  padding-block: 28px;
+  border-block: 1px solid rgb(var(--color-foreground-rgb) / 0.1);
+}
+
+.petventra-trust__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media screen and (min-width: 750px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.petventra-trust__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.petventra-trust__icon {
+  font-size: 1.2rem;
+}

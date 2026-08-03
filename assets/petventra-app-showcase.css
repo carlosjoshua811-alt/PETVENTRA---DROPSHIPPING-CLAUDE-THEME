@@ -1,0 +1,78 @@
+.petventra-app {
+  padding-block: 48px;
+
+  @media screen and (min-width: 750px) {
+    padding-block: 72px;
+  }
+}
+
+.petventra-app__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+
+  @media screen and (min-width: 750px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+}
+
+.petventra-app__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.petventra-app__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.petventra-app__heading {
+  margin: 0;
+  font-family: var(--font-heading--family, inherit);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.petventra-app__intro {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.petventra-app__features {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.petventra-app__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.petventra-app__feature-icon {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.petventra-app__feature-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.petventra-app__feature-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--color-foreground-muted, var(--color-foreground));
+}

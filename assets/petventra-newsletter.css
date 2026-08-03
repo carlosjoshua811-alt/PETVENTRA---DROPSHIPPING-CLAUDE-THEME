@@ -1,0 +1,91 @@
+.petventra-newsletter {
+  background-color: var(--petventra-newsletter-bg, var(--color-background));
+  padding-block: 48px;
+
+  @media screen and (min-width: 750px) {
+    padding-block: 72px;
+  }
+}
+
+.petventra-newsletter__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  max-width: 36em;
+  margin: 0 auto;
+}
+
+.petventra-newsletter__heading {
+  margin: 0;
+  font-family: var(--font-heading--family, inherit);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.petventra-newsletter__subheading {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.petventra-newsletter__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.petventra-newsletter__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
+  }
+}
+
+.petventra-newsletter__input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 18px;
+  border: 1px solid var(--color-input-border, rgb(var(--color-foreground-rgb) / 0.2));
+  border-radius: 8px;
+  background-color: var(--color-input-background, transparent);
+  color: var(--color-input-text, var(--color-foreground));
+}
+
+.petventra-newsletter__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-primary-button-background, #121212);
+  color: var(--color-primary-button-text, #ffffff);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.petventra-newsletter__button:hover {
+  opacity: 0.85;
+}
+
+.petventra-newsletter__message {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+}
+
+.petventra-newsletter__message--error {
+  color: var(--color-error, #d02e2e);
+}
+
+.petventra-newsletter__message--success {
+  color: var(--color-success, #16a34a);
+}

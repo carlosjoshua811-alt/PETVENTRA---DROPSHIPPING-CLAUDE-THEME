@@ -27,23 +27,15 @@
       "block_order": ["badge_1", "badge_2", "badge_3"],
       "settings": {}
     },
-    "petventra_problem": {
-      "type": "petventra-problem",
+    "petventra_trust_features": {
+      "type": "petventra-trust-features",
       "blocks": {
-        "problem_1": {
-          "type": "problem",
-          "settings": { "icon": "🚪", "title": "O portão ficou aberto", "text": "E o teu cão desapareceu antes de dares por isso." }
-        },
-        "problem_2": {
-          "type": "problem",
-          "settings": { "icon": "🎆", "title": "Fogo de artifício assustou-o", "text": "Ele fugiu em pânico e não sabes para onde foi." }
-        },
-        "problem_3": {
-          "type": "problem",
-          "settings": { "icon": "🌳", "title": "Perdeu-se na caminhada", "text": "Afastou-se do trilho e já não vês a coleira ao longe." }
-        }
+        "feature_1": { "type": "feature", "settings": { "icon": "🛡️", "title": "Garantia de 30 dias" } },
+        "feature_2": { "type": "feature", "settings": { "icon": "🚚", "title": "Envio grátis 24-48h" } },
+        "feature_3": { "type": "feature", "settings": { "icon": "💬", "title": "Suporte 7 dias por semana" } },
+        "feature_4": { "type": "feature", "settings": { "icon": "⭐", "title": "+10.000 clientes satisfeitos" } }
       },
-      "block_order": ["problem_1", "problem_2", "problem_3"],
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
       "settings": {}
     },
     "petventra_how_it_works": {
@@ -65,6 +57,17 @@
       "block_order": ["step_1", "step_2", "step_3"],
       "settings": {}
     },
+    "petventra_app_showcase": {
+      "type": "petventra-app-showcase",
+      "blocks": {
+        "app_feature_1": { "type": "app_feature", "settings": { "icon": "📍", "title": "Localização em tempo real", "text": "Vê onde está o teu cão, atualizado ao segundo." } },
+        "app_feature_2": { "type": "app_feature", "settings": { "icon": "🚧", "title": "Alertas de zona segura", "text": "Recebe uma notificação assim que o teu cão sai da área definida." } },
+        "app_feature_3": { "type": "app_feature", "settings": { "icon": "🕓", "title": "Histórico de percursos", "text": "Consulta todos os passeios e locais visitados." } },
+        "app_feature_4": { "type": "app_feature", "settings": { "icon": "🔋", "title": "Estado da bateria", "text": "Acompanha o nível de bateria da coleira em tempo real." } }
+      },
+      "block_order": ["app_feature_1", "app_feature_2", "app_feature_3", "app_feature_4"],
+      "settings": {}
+    },
     "petventra_specs": {
       "type": "petventra-specs",
       "blocks": {
@@ -76,6 +79,18 @@
         "spec_6": { "type": "spec", "settings": { "label": "App", "value": "iOS e Android, grátis para sempre" } }
       },
       "block_order": ["spec_1", "spec_2", "spec_3", "spec_4", "spec_5", "spec_6"],
+      "settings": {}
+    },
+    "petventra_comparison": {
+      "type": "petventra-comparison",
+      "blocks": {
+        "row_1": { "type": "comparison_row", "settings": { "feature": "GPS em tempo real", "petventra_value": true, "competitor_value": false } },
+        "row_2": { "type": "comparison_row", "settings": { "feature": "Alertas de fuga", "petventra_value": true, "competitor_value": false } },
+        "row_3": { "type": "comparison_row", "settings": { "feature": "Resistente à água (IP67)", "petventra_value": true, "competitor_value": false } },
+        "row_4": { "type": "comparison_row", "settings": { "feature": "App gratuita", "petventra_value": true, "competitor_value": false } },
+        "row_5": { "type": "comparison_row", "settings": { "feature": "Histórico de percursos", "petventra_value": true, "competitor_value": false } }
+      },
+      "block_order": ["row_1", "row_2", "row_3", "row_4", "row_5"],
       "settings": {}
     },
     "petventra_testimonials": {
@@ -124,6 +139,10 @@
       "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5"],
       "settings": {}
     },
+    "petventra_newsletter": {
+      "type": "petventra-newsletter",
+      "settings": {}
+    },
     "petventra_final_cta": {
       "type": "petventra-final-cta",
       "settings": {}
@@ -131,11 +150,14 @@
   },
   "order": [
     "petventra_hero",
-    "petventra_problem",
+    "petventra_trust_features",
     "petventra_how_it_works",
+    "petventra_app_showcase",
     "petventra_specs",
+    "petventra_comparison",
     "petventra_testimonials",
     "petventra_faq",
+    "petventra_newsletter",
     "petventra_final_cta"
   ]
 }

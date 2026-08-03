@@ -57,9 +57,15 @@
             class: 'petventra-hero__image'
         }}
       {% else %}
-        <div class="petventra-hero__image-placeholder">
-          {{ 'hero-apparel-2' | placeholder_svg_tag: 'petventra-hero__placeholder' }}
-        </div>
+        <img
+          src="{{ 'petventra-hero.jpg' | asset_url }}"
+          alt="{{ section.settings.heading | escape }}"
+          loading="eager"
+          fetchpriority="high"
+          class="petventra-hero__image"
+          width="1600"
+          height="2400"
+        >
       {% endif %}
     </div>
   </div>

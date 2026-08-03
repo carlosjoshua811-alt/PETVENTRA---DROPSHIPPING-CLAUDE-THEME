@@ -1,0 +1,79 @@
+.petventra-comparison {
+  padding-block: 48px;
+
+  @media screen and (min-width: 750px) {
+    padding-block: 72px;
+  }
+}
+
+.petventra-comparison__heading {
+  margin: 0 0 12px;
+  text-align: center;
+  font-family: var(--font-heading--family, inherit);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.petventra-comparison__intro {
+  text-align: center;
+  max-width: 40em;
+  margin: 0 auto 32px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.petventra-comparison__table-wrapper {
+  max-width: 46em;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.petventra-comparison__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.petventra-comparison__th,
+.petventra-comparison__td {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid rgb(var(--color-foreground-rgb) / 0.12);
+}
+
+.petventra-comparison__th--feature,
+.petventra-comparison__td--feature {
+  text-align: left;
+}
+
+.petventra-comparison__th--petventra {
+  color: var(--color-primary-button-background, #121212);
+  font-weight: 700;
+}
+
+.petventra-comparison__td--feature {
+  font-weight: 600;
+}
+
+.petventra-comparison__td--petventra {
+  background-color: rgb(var(--color-foreground-rgb) / 0.04);
+}
+
+.petventra-comparison__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.petventra-comparison__icon--yes {
+  background-color: rgb(34 197 94 / 0.15);
+  color: #16a34a;
+}
+
+.petventra-comparison__icon--no {
+  background-color: rgb(var(--color-foreground-rgb) / 0.08);
+  color: rgb(var(--color-foreground-rgb) / 0.4);
+}
