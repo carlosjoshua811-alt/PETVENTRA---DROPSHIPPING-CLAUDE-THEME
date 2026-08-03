@@ -1,0 +1,67 @@
+.petventra-problem {
+  padding-block: 48px;
+
+  @media screen and (min-width: 750px) {
+    padding-block: 72px;
+  }
+}
+
+.petventra-problem__header {
+  text-align: center;
+  max-width: 40em;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.petventra-problem__heading {
+  margin: 0;
+  font-family: var(--font-heading--family, inherit);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.petventra-problem__intro {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.petventra-problem__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media screen and (min-width: 750px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.petventra-problem__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px;
+  border-radius: 12px;
+  background-color: rgb(var(--color-foreground-rgb) / 0.04);
+  text-align: center;
+  align-items: center;
+}
+
+.petventra-problem__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.petventra-problem__item-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.petventra-problem__item-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--color-foreground-muted, var(--color-foreground));
+}

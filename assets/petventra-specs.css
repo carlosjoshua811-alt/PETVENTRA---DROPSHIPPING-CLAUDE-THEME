@@ -1,0 +1,70 @@
+.petventra-specs {
+  padding-block: 48px;
+
+  @media screen and (min-width: 750px) {
+    padding-block: 72px;
+  }
+}
+
+.petventra-specs__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+
+  @media screen and (min-width: 750px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+}
+
+.petventra-specs__image,
+.petventra-specs__placeholder {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.petventra-specs__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.petventra-specs__heading {
+  margin: 0;
+  font-family: var(--font-heading--family, inherit);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.petventra-specs__intro {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.petventra-specs__list {
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.petventra-specs__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgb(var(--color-foreground-rgb) / 0.1);
+}
+
+.petventra-specs__label {
+  margin: 0;
+  font-weight: 600;
+}
+
+.petventra-specs__value {
+  margin: 0;
+  text-align: right;
+  color: var(--color-foreground-muted, var(--color-foreground));
+}

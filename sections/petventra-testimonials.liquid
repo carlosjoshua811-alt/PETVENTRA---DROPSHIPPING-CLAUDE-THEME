@@ -1,0 +1,109 @@
+{{ 'petventra-testimonials.css' | asset_url | stylesheet_tag }}
+
+<div class="petventra-testimonials page-width">
+  {% if section.settings.heading != blank %}
+    <h2 class="petventra-testimonials__heading">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="petventra-testimonials__grid">
+      {% for block in section.blocks %}
+        <div class="petventra-testimonials__card" {{ block.shopify_attributes }}>
+          {% if block.settings.rating > 0 %}
+            <div class="petventra-testimonials__rating" aria-hidden="true">
+              {% for i in (1..5) %}
+                {% if i <= block.settings.rating %}
+                  <span class="petventra-testimonials__star petventra-testimonials__star--filled">★</span>
+                {% else %}
+                  <span class="petventra-testimonials__star">★</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% if block.settings.quote != blank %}
+            <blockquote class="petventra-testimonials__quote">{{ block.settings.quote }}</blockquote>
+          {% endif %}
+
+          <div class="petventra-testimonials__author">
+            {% if block.settings.avatar != blank %}
+              {{ block.settings.avatar | image_url: width: 96 | image_tag: loading: 'lazy', class: 'petventra-testimonials__avatar' }}
+            {% endif %}
+            {% if block.settings.author != blank %}
+              <span class="petventra-testimonials__author-name">{{ block.settings.author }}</span>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Petventra Testimonials",
+  "tag": "section",
+  "class": "petventra-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "O que dizem os donos de cães"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Quote",
+          "default": "<p>Já encontrei o meu cão duas vezes graças à Petventra. Não vivo sem.</p>"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author name",
+          "default": "Ana Marques"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Avatar (optional)"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Petventra Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": { "quote": "<p>Já encontrei o meu cão duas vezes graças à Petventra. Não vivo sem.</p>", "author": "Ana Marques", "rating": 5 }
+        },
+        {
+          "type": "testimonial",
+          "settings": { "quote": "<p>A bateria dura mesmo semanas. App super simples de usar.</p>", "author": "Ricardo Sousa", "rating": 5 }
+        },
+        {
+          "type": "testimonial",
+          "settings": { "quote": "<p>Comprei para o meu cão que adora fugir. Melhor investimento que fiz.</p>", "author": "Beatriz Lima", "rating": 4 }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

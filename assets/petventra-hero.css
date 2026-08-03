@@ -1,0 +1,116 @@
+.petventra-hero {
+  background-color: var(--petventra-hero-bg, var(--color-background));
+  padding-block: 48px;
+
+  @media screen and (min-width: 750px) {
+    padding-block: 80px;
+  }
+}
+
+.petventra-hero__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+
+  @media screen and (min-width: 750px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+.petventra-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.petventra-hero__eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-foreground-muted, var(--color-foreground));
+}
+
+.petventra-hero__heading {
+  margin: 0;
+  font-family: var(--font-heading--family, inherit);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.petventra-hero__description {
+  font-family: var(--font-body--family, inherit);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 40em;
+}
+
+.petventra-hero__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.petventra-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 14px 32px;
+  border-radius: var(--style-border-radius-buttons, 8px);
+  background-color: var(--color-primary-button-background, #121212);
+  color: var(--color-primary-button-text, #ffffff);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.petventra-hero__cta:hover {
+  opacity: 0.85;
+}
+
+.petventra-hero__secondary-text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-foreground-muted, var(--color-foreground));
+}
+
+.petventra-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.petventra-hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.petventra-hero__badge-icon {
+  font-size: 1rem;
+}
+
+.petventra-hero__media {
+  position: relative;
+}
+
+.petventra-hero__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--style-border-radius, 12px);
+  display: block;
+}
+
+.petventra-hero__placeholder {
+  width: 100%;
+  height: 100%;
+}

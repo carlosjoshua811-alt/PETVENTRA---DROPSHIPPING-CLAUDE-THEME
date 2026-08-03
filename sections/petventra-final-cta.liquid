@@ -1,0 +1,70 @@
+{{ 'petventra-final-cta.css' | asset_url | stylesheet_tag }}
+
+<div class="petventra-final-cta" style="--petventra-final-cta-bg: {{ section.settings.background_color }};">
+  <div class="petventra-final-cta__container page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="petventra-final-cta__heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <div class="petventra-final-cta__subheading">{{ section.settings.subheading }}</div>
+    {% endif %}
+    {% if section.settings.cta_label != blank %}
+      <a href="{{ section.settings.cta_link | default: '#' }}" class="petventra-final-cta__button">
+        {{ section.settings.cta_label }}
+      </a>
+    {% endif %}
+    {% if section.settings.urgency_text != blank %}
+      <p class="petventra-final-cta__urgency">{{ section.settings.urgency_text }}</p>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Petventra Final CTA",
+  "tag": "section",
+  "class": "petventra-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Dá ao teu cão a liberdade que ele merece"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Junta-te a milhares de donos que já têm tranquilidade a cada passeio.</p>"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "default": "Comprar agora"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "urgency_text",
+      "label": "Urgency text",
+      "default": "Stock limitado · Envio grátis hoje"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#121212"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Petventra Final CTA"
+    }
+  ]
+}
+{% endschema %}

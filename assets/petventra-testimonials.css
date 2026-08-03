@@ -1,0 +1,73 @@
+.petventra-testimonials {
+  padding-block: 48px;
+
+  @media screen and (min-width: 750px) {
+    padding-block: 72px;
+  }
+}
+
+.petventra-testimonials__heading {
+  margin: 0 0 40px;
+  text-align: center;
+  font-family: var(--font-heading--family, inherit);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.petventra-testimonials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media screen and (min-width: 750px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.petventra-testimonials__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  border-radius: 12px;
+  background-color: rgb(var(--color-foreground-rgb) / 0.04);
+}
+
+.petventra-testimonials__rating {
+  display: flex;
+  gap: 2px;
+}
+
+.petventra-testimonials__star {
+  color: rgb(var(--color-foreground-rgb) / 0.25);
+}
+
+.petventra-testimonials__star--filled {
+  color: #f5a623;
+}
+
+.petventra-testimonials__quote {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.petventra-testimonials__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.petventra-testimonials__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.petventra-testimonials__author-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}

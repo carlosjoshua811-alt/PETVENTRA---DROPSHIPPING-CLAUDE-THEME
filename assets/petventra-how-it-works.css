@@ -1,0 +1,74 @@
+.petventra-how {
+  padding-block: 48px;
+
+  @media screen and (min-width: 750px) {
+    padding-block: 72px;
+  }
+}
+
+.petventra-how__header {
+  text-align: center;
+  max-width: 40em;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.petventra-how__heading {
+  margin: 0;
+  font-family: var(--font-heading--family, inherit);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.petventra-how__intro {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.petventra-how__steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+
+  @media screen and (min-width: 750px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.petventra-how__step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.petventra-how__step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary-button-background, #121212);
+  color: var(--color-primary-button-text, #ffffff);
+  font-weight: 700;
+}
+
+.petventra-how__step-title {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.petventra-how__step-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--color-foreground-muted, var(--color-foreground));
+}

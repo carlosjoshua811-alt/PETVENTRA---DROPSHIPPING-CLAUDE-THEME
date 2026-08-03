@@ -1,0 +1,84 @@
+{{ 'petventra-faq.css' | asset_url | stylesheet_tag }}
+
+<div class="petventra-faq page-width">
+  {% if section.settings.heading != blank %}
+    <h2 class="petventra-faq__heading">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="petventra-faq__list">
+      {% for block in section.blocks %}
+        <details class="petventra-faq__item" {{ block.shopify_attributes }}>
+          <summary class="petventra-faq__question">
+            {{ block.settings.question }}
+            <span class="petventra-faq__icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="petventra-faq__answer">{{ block.settings.answer }}</div>
+        </details>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Petventra FAQ",
+  "tag": "section",
+  "class": "petventra-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Perguntas frequentes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Funciona em qualquer lugar?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Sim, o rastreador usa GPS e rede móvel, funcionando em qualquer lugar com cobertura de rede.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Petventra FAQ",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": { "question": "Funciona em qualquer lugar?", "answer": "<p>Sim, o rastreador usa GPS e rede móvel, funcionando em qualquer lugar com cobertura de rede.</p>" }
+        },
+        {
+          "type": "faq_item",
+          "settings": { "question": "Quanto tempo dura a bateria?", "answer": "<p>Até 15 dias com uma única carga, dependendo da frequência de atualização escolhida.</p>" }
+        },
+        {
+          "type": "faq_item",
+          "settings": { "question": "É resistente à água?", "answer": "<p>Sim, tem certificação IP67, resistente a chuva, lama e mergulhos acidentais.</p>" }
+        },
+        {
+          "type": "faq_item",
+          "settings": { "question": "Preciso de subscrição mensal?", "answer": "<p>É necessário um plano de dados simples para manter o rastreamento em tempo real, com opções a partir de valores acessíveis.</p>" }
+        },
+        {
+          "type": "faq_item",
+          "settings": { "question": "Serve para qualquer tamanho de cão?", "answer": "<p>Sim, a coleira é ajustável e adequada para cães pequenos, médios e grandes.</p>" }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
