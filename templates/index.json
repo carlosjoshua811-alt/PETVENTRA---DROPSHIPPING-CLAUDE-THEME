@@ -11,105 +11,170 @@
     "petventra_hero": {
       "type": "petventra-hero",
       "blocks": {
-        "badge_1": {
-          "type": "badge",
-          "settings": { "icon": "📍", "label": "GPS em tempo real" }
-        },
-        "badge_2": {
-          "type": "badge",
-          "settings": { "icon": "🔋", "label": "Bateria até 15 dias" }
-        },
-        "badge_3": {
-          "type": "badge",
-          "settings": { "icon": "💧", "label": "Resistente à água" }
-        }
+        "badge_1": { "type": "badge", "settings": { "icon": "🎚️", "label": "Adjustable Sensitivity" } },
+        "badge_2": { "type": "badge", "settings": { "icon": "🛑", "label": "Safety Auto-Stop" } },
+        "badge_3": { "type": "badge", "settings": { "icon": "💧", "label": "IP67 Waterproof" } }
       },
       "block_order": ["badge_1", "badge_2", "badge_3"],
-      "settings": {}
+      "settings": {
+        "eyebrow": "Anti-Bark Collar",
+        "heading": "Stop The Barking, Gently.",
+        "description": "<p>AI-powered sound detection with adjustable sensitivity and a built-in safety auto-stop. Humane, waterproof, and built for real training.</p>",
+        "cta_label": "Shop Now",
+        "cta_link": "/products/smart-automatic-anti-barking-dog-collar-rechargeable-bark-stopper-stop-barking-hd-digital-display-ip67-waterproof-collar-for-dogs-pet-products",
+        "secondary_text": "Free shipping · 30-Day Guarantee",
+        "image_url": "https://cdn.shopify.com/s/files/1/0788/9921/6522/files/55dfeeed-a10d-484c-96e0-5bd9dc6caa84.jpg?v=1786343676",
+        "background_color": "#f5f6f4"
+      }
     },
     "petventra_trust_features": {
       "type": "petventra-trust-features",
       "blocks": {
-        "feature_1": { "type": "feature", "settings": { "icon": "🛡️", "title": "Garantia de 30 dias" } },
-        "feature_2": { "type": "feature", "settings": { "icon": "🚚", "title": "Envio grátis 24-48h" } },
-        "feature_3": { "type": "feature", "settings": { "icon": "💬", "title": "Suporte 7 dias por semana" } },
-        "feature_4": { "type": "feature", "settings": { "icon": "⭐", "title": "+10.000 clientes satisfeitos" } }
+        "feature_1": { "type": "feature", "settings": { "icon": "🎚️", "title": "Adjustable & Humane" } },
+        "feature_2": { "type": "feature", "settings": { "icon": "🛑", "title": "Safety Auto-Stop" } },
+        "feature_3": { "type": "feature", "settings": { "icon": "💪", "title": "Built To Last" } }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "block_order": ["feature_1", "feature_2", "feature_3"],
       "settings": {}
     },
-    "petventra_how_it_works": {
-      "type": "petventra-how-it-works",
+    "petventra_final_cta": {
+      "type": "petventra-final-cta",
+      "settings": {
+        "heading": "Gentle Training, Real Results",
+        "subheading": "<p>Correct excessive barking with smart sound detection and a built-in safety auto-stop.</p>",
+        "cta_label": "Shop Now",
+        "cta_link": "/products/smart-automatic-anti-barking-dog-collar-rechargeable-bark-stopper-stop-barking-hd-digital-display-ip67-waterproof-collar-for-dogs-pet-products",
+        "urgency_text": "Limited stock · 30-Day Guarantee",
+        "background_color": "#2E2E38"
+      }
+    },
+    "petventra_press": {
+      "type": "petventra-press",
       "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": { "title": "Coloca a coleira", "text": "Ajusta a coleira ao tamanho do teu cão em segundos." }
-        },
-        "step_2": {
-          "type": "step",
-          "settings": { "title": "Liga à app gratuita", "text": "Associa o dispositivo por Bluetooth em menos de 2 minutos." }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": { "title": "Acompanha em tempo real", "text": "Vê a localização exata do teu cão a qualquer momento, em qualquer lugar." }
-        }
+        "logo_1": { "type": "press_logo", "settings": { "name": "Logo" } },
+        "logo_2": { "type": "press_logo", "settings": { "name": "Logo" } },
+        "logo_3": { "type": "press_logo", "settings": { "name": "Logo" } },
+        "logo_4": { "type": "press_logo", "settings": { "name": "Logo" } }
       },
-      "block_order": ["step_1", "step_2", "step_3"],
-      "settings": {}
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4"],
+      "settings": { "label": "As Featured In" }
+    },
+    "petventra_ambassadors": {
+      "type": "petventra-ambassadors",
+      "blocks": {
+        "amb_1": { "type": "ambassador", "settings": { "role": "Coming soon", "name": "To be announced" } },
+        "amb_2": { "type": "ambassador", "settings": { "role": "Coming soon", "name": "To be announced" } },
+        "amb_3": { "type": "ambassador", "settings": { "role": "Coming soon", "name": "To be announced" } },
+        "amb_4": { "type": "ambassador", "settings": { "role": "Coming soon", "name": "To be announced" } }
+      },
+      "block_order": ["amb_1", "amb_2", "amb_3", "amb_4"],
+      "settings": { "eyebrow": "Partners", "heading": "Petventra Partners" }
     },
     "petventra_app_showcase": {
       "type": "petventra-app-showcase",
       "blocks": {
-        "app_feature_1": { "type": "app_feature", "settings": { "icon": "📍", "title": "Localização em tempo real", "text": "Vê onde está o teu cão, atualizado ao segundo." } },
-        "app_feature_2": { "type": "app_feature", "settings": { "icon": "🚧", "title": "Alertas de zona segura", "text": "Recebe uma notificação assim que o teu cão sai da área definida." } },
-        "app_feature_3": { "type": "app_feature", "settings": { "icon": "🕓", "title": "Histórico de percursos", "text": "Consulta todos os passeios e locais visitados." } },
-        "app_feature_4": { "type": "app_feature", "settings": { "icon": "🔋", "title": "Estado da bateria", "text": "Acompanha o nível de bateria da coleira em tempo real." } }
+        "app_feature_1": { "type": "app_feature", "settings": { "icon": "🎚️", "title": "Beep Sensitivity", "text": "Adjusts microphone sensitivity to your dog's temperament." } },
+        "app_feature_2": { "type": "app_feature", "settings": { "icon": "📳", "title": "Vibration Mode", "text": "A gentle, silent alternative to sound." } },
+        "app_feature_3": { "type": "app_feature", "settings": { "icon": "🔋", "title": "Battery Indicator", "text": "See the charge level right on the screen." } },
+        "app_feature_4": { "type": "app_feature", "settings": { "icon": "🛡️", "title": "Safety Auto-Stop", "text": "Automatically stops correction for your dog's wellbeing." } }
       },
       "block_order": ["app_feature_1", "app_feature_2", "app_feature_3", "app_feature_4"],
-      "settings": {}
+      "settings": {
+        "heading": "Color LCD Screen, Direct Control On The Collar",
+        "intro": "<p>No app needed — adjust the mode and sensitivity right on the collar's touch screen, with a battery indicator always in view.</p>",
+        "image_url": "https://cdn.shopify.com/s/files/1/0788/9921/6522/files/c223a45a-8a41-42bd-ac0c-f8773c50bb69.jpg?v=1786343676"
+      }
     },
     "petventra_specs": {
       "type": "petventra-specs",
       "blocks": {
-        "spec_1": { "type": "spec", "settings": { "label": "Bateria", "value": "Até 15 dias de autonomia" } },
-        "spec_2": { "type": "spec", "settings": { "label": "Resistência", "value": "IP67 à prova de água e poeira" } },
-        "spec_3": { "type": "spec", "settings": { "label": "Alcance GPS", "value": "Cobertura ilimitada via rede móvel" } },
-        "spec_4": { "type": "spec", "settings": { "label": "Peso", "value": "32g — confortável para todas as raças" } },
-        "spec_5": { "type": "spec", "settings": { "label": "Conectividade", "value": "GPS + LBS + Bluetooth" } },
-        "spec_6": { "type": "spec", "settings": { "label": "App", "value": "iOS e Android, grátis para sempre" } }
+        "spec_1": { "type": "spec", "settings": { "label": "🔋 Battery", "value": "USB rechargeable, several days of battery life per charge" } },
+        "spec_2": { "type": "spec", "settings": { "label": "💧 Water Resistance", "value": "IP67 rated — rain, mud, and splashes" } },
+        "spec_3": { "type": "spec", "settings": { "label": "🎚️ Sensitivity", "value": "8 adjustable levels to match your dog's temperament" } },
+        "spec_4": { "type": "spec", "settings": { "label": "🛑 Auto-Stop", "value": "Built-in safety auto-stop to prevent over-correction" } }
       },
-      "block_order": ["spec_1", "spec_2", "spec_3", "spec_4", "spec_5", "spec_6"],
-      "settings": {}
+      "block_order": ["spec_1", "spec_2", "spec_3", "spec_4"],
+      "settings": {
+        "heading": "Built For Everyday Life",
+        "intro": "<p>Specs designed for comfort and safety in every situation.</p>",
+        "image_url": "https://cdn.shopify.com/s/files/1/0788/9921/6522/files/190a7117-130e-4406-bb44-975c6ec22b4e.jpg?v=1786343676"
+      }
     },
     "petventra_comparison": {
       "type": "petventra-comparison",
       "blocks": {
-        "row_1": { "type": "comparison_row", "settings": { "feature": "GPS em tempo real", "petventra_value": true, "competitor_value": false } },
-        "row_2": { "type": "comparison_row", "settings": { "feature": "Alertas de fuga", "petventra_value": true, "competitor_value": false } },
-        "row_3": { "type": "comparison_row", "settings": { "feature": "Resistente à água (IP67)", "petventra_value": true, "competitor_value": false } },
-        "row_4": { "type": "comparison_row", "settings": { "feature": "App gratuita", "petventra_value": true, "competitor_value": false } },
-        "row_5": { "type": "comparison_row", "settings": { "feature": "Histórico de percursos", "petventra_value": true, "competitor_value": false } }
+        "row_1": { "type": "comparison_row", "settings": { "feature": "Adjustable Sensitivity (8 Levels)", "petventra_value": true, "competitor_a_value": false, "competitor_b_value": false } },
+        "row_2": { "type": "comparison_row", "settings": { "feature": "Safety Auto-Stop", "petventra_value": true, "competitor_a_value": false, "competitor_b_value": false } },
+        "row_3": { "type": "comparison_row", "settings": { "feature": "3 Correction Modes (Beep / Vibration / Static)", "petventra_value": true, "competitor_a_value": false, "competitor_b_value": false } },
+        "row_4": { "type": "comparison_row", "settings": { "feature": "IP67 Waterproof", "petventra_value": true, "competitor_a_value": false, "competitor_b_value": false } },
+        "row_5": { "type": "comparison_row", "settings": { "feature": "Color LCD Display", "petventra_value": true, "competitor_a_value": false, "competitor_b_value": false } },
+        "row_6": { "type": "comparison_row", "settings": { "feature": "Humane, Gradual Training", "petventra_value": true, "competitor_a_value": false, "competitor_b_value": false } }
       },
-      "block_order": ["row_1", "row_2", "row_3", "row_4", "row_5"],
-      "settings": {}
+      "block_order": ["row_1", "row_2", "row_3", "row_4", "row_5", "row_6"],
+      "settings": {
+        "heading": "Why Choose Petventra",
+        "intro": "<p>See how Petventra compares to traditional bark correction methods.</p>",
+        "petventra_label": "Petventra",
+        "competitor_a_label": "Traditional Shock Collar",
+        "competitor_b_label": "Ultrasonic Devices"
+      }
     },
     "petventra_testimonials": {
       "type": "petventra-testimonials",
       "blocks": {
         "testimonial_1": {
           "type": "testimonial",
-          "settings": { "quote": "<p>Já encontrei o meu cão duas vezes graças à Petventra. Não vivo sem.</p>", "author": "Ana Marques", "rating": 5 }
+          "settings": { "quote": "<p>Finally, a bark collar that doesn't feel like a punishment. The auto-stop gives me real peace of mind.</p>", "author": "Michael D.", "rating": 5 }
         },
         "testimonial_2": {
           "type": "testimonial",
-          "settings": { "quote": "<p>A bateria dura mesmo semanas. App super simples de usar.</p>", "author": "Ricardo Sousa", "rating": 5 }
+          "settings": { "quote": "<p>We have a shy rescue and the beep-only mode worked perfectly. No more complaints from the building.</p>", "author": "Jessica L.", "rating": 5 }
         },
         "testimonial_3": {
           "type": "testimonial",
-          "settings": { "quote": "<p>Comprei para o meu cão que adora fugir. Melhor investimento que fiz.</p>", "author": "Beatriz Lima", "rating": 4 }
+          "settings": { "quote": "<p>The waterproof claim is real — she wears it on every walk, rain or shine. Battery's still going after two weeks.</p>", "author": "David K.", "rating": 4 }
         }
       },
       "block_order": ["testimonial_1", "testimonial_2", "testimonial_3"],
+      "settings": { "heading": "What Dog Owners Are Saying" }
+    },
+    "petventra_newsletter": {
+      "type": "petventra-newsletter",
+      "settings": {
+        "heading": "Stay Up To Date On News And Offers",
+        "subheading": "<p>Subscribe and get an exclusive discount on your first order.</p>",
+        "placeholder": "Your email",
+        "button_label": "Subscribe",
+        "success_text": "Thanks! You're on the list."
+      }
+    },
+    "petventra_color_tiles": {
+      "type": "petventra-color-tiles",
+      "blocks": {
+        "tile_black": {
+          "type": "tile",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0788/9921/6522/files/55dfeeed-a10d-484c-96e0-5bd9dc6caa84.jpg?v=1786343676",
+            "eyebrow": "Available in",
+            "name": "Black",
+            "tile_color": "#E7E7EC",
+            "cta_label": "Shop Black",
+            "cta_link": "/products/smart-automatic-anti-barking-dog-collar-rechargeable-bark-stopper-stop-barking-hd-digital-display-ip67-waterproof-collar-for-dogs-pet-products?variant=49897256616074"
+          }
+        },
+        "tile_white": {
+          "type": "tile",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0788/9921/6522/files/0a0838f2-8a6b-472c-815e-9ad4eba8ecea.jpg?v=1786343676",
+            "eyebrow": "Available in",
+            "name": "White",
+            "tile_color": "#F4F1EA",
+            "cta_label": "Shop White",
+            "cta_link": "/products/smart-automatic-anti-barking-dog-collar-rechargeable-bark-stopper-stop-barking-hd-digital-display-ip67-waterproof-collar-for-dogs-pet-products?variant=49897256681610"
+          }
+        }
+      },
+      "block_order": ["tile_black", "tile_white"],
       "settings": {}
     },
     "petventra_faq": {
@@ -117,47 +182,41 @@
       "blocks": {
         "faq_1": {
           "type": "faq_item",
-          "settings": { "question": "Funciona em qualquer lugar?", "answer": "<p>Sim, o rastreador usa GPS e rede móvel, funcionando em qualquer lugar com cobertura de rede.</p>" }
+          "settings": { "question": "Is the collar safe for my dog?", "answer": "<p>Yes. It has a built-in safety auto-stop that shuts off correction if your dog barks continuously, preventing over-correction.</p>" }
         },
         "faq_2": {
           "type": "faq_item",
-          "settings": { "question": "Quanto tempo dura a bateria?", "answer": "<p>Até 15 dias com uma única carga, dependendo da frequência de atualização escolhida.</p>" }
+          "settings": { "question": "What modes are available?", "answer": "<p>3 combinable modes: sound (beep), vibration, and a low-intensity static pulse, with 8 adjustable sensitivity levels.</p>" }
         },
         "faq_3": {
           "type": "faq_item",
-          "settings": { "question": "É resistente à água?", "answer": "<p>Sim, tem certificação IP67, resistente a chuva, lama e mergulhos acidentais.</p>" }
+          "settings": { "question": "Is it water resistant?", "answer": "<p>Yes, it's IP67 rated — resistant to rain, mud, and splashes.</p>" }
         },
         "faq_4": {
           "type": "faq_item",
-          "settings": { "question": "Preciso de subscrição mensal?", "answer": "<p>É necessário um plano de dados simples para manter o rastreamento em tempo real, com opções a partir de valores acessíveis.</p>" }
+          "settings": { "question": "How long does the battery last?", "answer": "<p>It's USB rechargeable and the battery lasts several days under normal daily use.</p>" }
         },
         "faq_5": {
           "type": "faq_item",
-          "settings": { "question": "Serve para qualquer tamanho de cão?", "answer": "<p>Sim, a coleira é ajustável e adequada para cães pequenos, médios e grandes.</p>" }
+          "settings": { "question": "Will it fit my dog?", "answer": "<p>The collar is adjustable from 0 to 27 inches in circumference, suitable for dogs from 8 lbs (3.5 kg) up to 120 lbs (55 kg).</p>" }
         }
       },
       "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5"],
-      "settings": {}
-    },
-    "petventra_newsletter": {
-      "type": "petventra-newsletter",
-      "settings": {}
-    },
-    "petventra_final_cta": {
-      "type": "petventra-final-cta",
-      "settings": {}
+      "settings": { "heading": "Frequently Asked Questions" }
     }
   },
   "order": [
     "petventra_hero",
     "petventra_trust_features",
-    "petventra_how_it_works",
+    "petventra_final_cta",
+    "petventra_press",
+    "petventra_ambassadors",
     "petventra_app_showcase",
     "petventra_specs",
     "petventra_comparison",
     "petventra_testimonials",
-    "petventra_faq",
     "petventra_newsletter",
-    "petventra_final_cta"
+    "petventra_color_tiles",
+    "petventra_faq"
   ]
 }
