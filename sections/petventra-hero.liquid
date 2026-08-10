@@ -1,6 +1,42 @@
 {{ 'petventra-hero.css' | asset_url | stylesheet_tag }}
 
 <div class="petventra-hero" style="--petventra-hero-bg: {{ section.settings.background_color }};">
+  <div class="petventra-hero__media">
+    {% if section.settings.image_url != blank %}
+      <img
+        src="{{ section.settings.image_url }}"
+        alt="{{ section.settings.heading | escape }}"
+        loading="eager"
+        fetchpriority="high"
+        class="petventra-hero__image"
+        width="1920"
+        height="880"
+      >
+    {% elsif section.settings.image != blank %}
+      {{
+        section.settings.image
+        | image_url: width: 1920
+        | image_tag:
+          loading: 'eager',
+          fetchpriority: 'high',
+          sizes: '100vw',
+          widths: '750,1000,1200,1500,1920,2400',
+          class: 'petventra-hero__image'
+      }}
+    {% else %}
+      <img
+        src="{{ 'petventra-hero.jpg' | asset_url }}"
+        alt="{{ section.settings.heading | escape }}"
+        loading="eager"
+        fetchpriority="high"
+        class="petventra-hero__image"
+        width="1920"
+        height="880"
+      >
+    {% endif %}
+    <div class="petventra-hero__overlay" aria-hidden="true"></div>
+  </div>
+
   <div class="petventra-hero__container page-width">
     <div class="petventra-hero__content">
       {% if section.settings.eyebrow != blank %}
@@ -41,41 +77,6 @@
             </li>
           {% endfor %}
         </ul>
-      {% endif %}
-    </div>
-
-    <div class="petventra-hero__media">
-      {% if section.settings.image_url != blank %}
-        <img
-          src="{{ section.settings.image_url }}"
-          alt="{{ section.settings.heading | escape }}"
-          loading="eager"
-          fetchpriority="high"
-          class="petventra-hero__image"
-          width="1600"
-          height="1600"
-        >
-      {% elsif section.settings.image != blank %}
-        {{
-          section.settings.image
-          | image_url: width: 1600
-          | image_tag:
-            loading: 'eager',
-            fetchpriority: 'high',
-            sizes: '(min-width: 750px) 50vw, 100vw',
-            widths: '400,600,800,1000,1200,1600',
-            class: 'petventra-hero__image'
-        }}
-      {% else %}
-        <img
-          src="{{ 'petventra-hero.jpg' | asset_url }}"
-          alt="{{ section.settings.heading | escape }}"
-          loading="eager"
-          fetchpriority="high"
-          class="petventra-hero__image"
-          width="1600"
-          height="2400"
-        >
       {% endif %}
     </div>
   </div>
