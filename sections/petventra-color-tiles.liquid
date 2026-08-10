@@ -1,0 +1,95 @@
+{{ 'petventra-color-tiles.css' | asset_url | stylesheet_tag }}
+
+<div class="petventra-color-tiles">
+  {% if section.blocks.size > 0 %}
+    <div class="petventra-color-tiles__grid">
+      {% for block in section.blocks %}
+        <div class="petventra-color-tiles__tile" style="background-color: {{ block.settings.tile_color | default: '#EDEDF0' }};" {{ block.shopify_attributes }}>
+          {% if block.settings.image_url != blank %}
+            <img
+              src="{{ block.settings.image_url }}"
+              alt="{{ block.settings.name | escape }}"
+              loading="lazy"
+              class="petventra-color-tiles__img"
+              width="600"
+              height="600"
+            >
+          {% endif %}
+          <div class="petventra-color-tiles__label">
+            {% if block.settings.eyebrow != blank %}
+              <p class="petventra-color-tiles__eyebrow">{{ block.settings.eyebrow }}</p>
+            {% endif %}
+            {% if block.settings.name != blank %}
+              <p class="petventra-color-tiles__name">{{ block.settings.name }}</p>
+            {% endif %}
+            {% if block.settings.cta_label != blank %}
+              <a href="{{ block.settings.cta_link | default: '#' }}" class="petventra-color-tiles__cta">
+                {{ block.settings.cta_label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Petventra Color Tiles",
+  "tag": "section",
+  "class": "petventra-section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Color tile",
+      "settings": [
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Product image URL (Shopify CDN)"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "Disponível em"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Color name",
+          "default": "Preto"
+        },
+        {
+          "type": "color",
+          "id": "tile_color",
+          "label": "Tile background color",
+          "default": "#EDEDF0"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Button label",
+          "default": "Comprar"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Petventra Color Tiles",
+      "blocks": [
+        { "type": "tile", "settings": { "eyebrow": "Disponível em", "name": "Preto", "tile_color": "#E7E7EC" } },
+        { "type": "tile", "settings": { "eyebrow": "Disponível em", "name": "Branco", "tile_color": "#F4F1EA" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

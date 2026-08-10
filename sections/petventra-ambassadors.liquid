@@ -1,0 +1,90 @@
+{{ 'petventra-ambassadors.css' | asset_url | stylesheet_tag }}
+
+<div class="petventra-ambassadors page-width">
+  {% if section.settings.eyebrow != blank %}
+    <p class="petventra-ambassadors__eyebrow">{{ section.settings.eyebrow }}</p>
+  {% endif %}
+  {% if section.settings.heading != blank %}
+    <h2 class="petventra-ambassadors__heading">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="petventra-ambassadors__grid">
+      {% for block in section.blocks %}
+        <div class="petventra-ambassadors__card" {{ block.shopify_attributes }}>
+          <div class="petventra-ambassadors__photo">
+            {% if block.settings.photo != blank %}
+              {{ block.settings.photo | image_url: width: 300 | image_tag: loading: 'lazy', alt: block.settings.name }}
+            {% else %}
+              <div class="petventra-ambassadors__photo-placeholder" aria-hidden="true">🐾</div>
+            {% endif %}
+          </div>
+          {% if block.settings.role != blank %}
+            <p class="petventra-ambassadors__role">{{ block.settings.role }}</p>
+          {% endif %}
+          {% if block.settings.name != blank %}
+            <p class="petventra-ambassadors__name">{{ block.settings.name }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Petventra Ambassadors",
+  "tag": "section",
+  "class": "petventra-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Parceiros"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Embaixadores Petventra"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ambassador",
+      "name": "Ambassador",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Photo (optional — merchant fills in later)"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role placeholder",
+          "default": "Em breve"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name placeholder",
+          "default": "Por anunciar"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Petventra Ambassadors",
+      "blocks": [
+        { "type": "ambassador", "settings": { "role": "Em breve", "name": "Por anunciar" } },
+        { "type": "ambassador", "settings": { "role": "Em breve", "name": "Por anunciar" } },
+        { "type": "ambassador", "settings": { "role": "Em breve", "name": "Por anunciar" } },
+        { "type": "ambassador", "settings": { "role": "Em breve", "name": "Por anunciar" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

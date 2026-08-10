@@ -1,0 +1,65 @@
+.petventra-color-tiles__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 4vw, 3rem);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.petventra-color-tiles__tile {
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.petventra-color-tiles__img {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 55%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.petventra-color-tiles__label {
+  position: relative;
+  z-index: 1;
+}
+
+.petventra-color-tiles__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #4CAF50;
+  text-transform: uppercase;
+}
+
+.petventra-color-tiles__name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2E2E38;
+  margin: 0.25rem 0 1rem;
+}
+
+.petventra-color-tiles__cta {
+  display: inline-block;
+  background: #2E2E38;
+  color: #FAFAFA;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 749px) {
+  .petventra-color-tiles__grid {
+    grid-template-columns: 1fr;
+  }
+}

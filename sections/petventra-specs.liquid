@@ -3,7 +3,16 @@
 <div class="petventra-specs page-width">
   <div class="petventra-specs__container">
     <div class="petventra-specs__media">
-      {% if section.settings.image != blank %}
+      {% if section.settings.image_url != blank %}
+        <img
+          src="{{ section.settings.image_url }}"
+          alt="{{ section.settings.heading | escape }}"
+          loading="lazy"
+          class="petventra-specs__image"
+          width="1200"
+          height="1200"
+        >
+      {% elsif section.settings.image != blank %}
         {{
           section.settings.image
           | image_url: width: 1200
@@ -60,6 +69,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_url",
+      "label": "Image URL (Shopify CDN — overrides Image above)"
     }
   ],
   "blocks": [

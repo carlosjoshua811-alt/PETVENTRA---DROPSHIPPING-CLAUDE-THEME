@@ -324,151 +324,169 @@
         "padding-block-end": 0
       }
     },
-    "product_recommendations_qggXJq": {
-      "type": "product-recommendations",
+    "petventra_trust_features": {
+      "type": "petventra-trust-features",
       "blocks": {
-        "text_cbcgyb": {
-          "type": "text",
-          "name": "t:names.header",
-          "settings": {
-            "text": "<h3>You may also like </h3>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h4",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+        "feature_1": { "type": "feature", "settings": { "icon": "🎚️", "title": "Ajustável e Humano" } },
+        "feature_2": { "type": "feature", "settings": { "icon": "🛑", "title": "Auto-Stop de Segurança" } },
+        "feature_3": { "type": "feature", "settings": { "icon": "💪", "title": "Construído para Durar" } }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "settings": {}
+    },
+    "petventra_final_cta": {
+      "type": "petventra-final-cta",
+      "settings": {
+        "heading": "Treino gentil, resultados reais",
+        "subheading": "<p>Corrige o latido em excesso com deteção inteligente de som e paragem automática de segurança.</p>",
+        "cta_label": "Comprar agora",
+        "urgency_text": "Stock limitado · Garantia de 30 dias",
+        "background_color": "#2E2E38"
+      }
+    },
+    "petventra_press": {
+      "type": "petventra-press",
+      "blocks": {
+        "logo_1": { "type": "press_logo", "settings": { "name": "Logo" } },
+        "logo_2": { "type": "press_logo", "settings": { "name": "Logo" } },
+        "logo_3": { "type": "press_logo", "settings": { "name": "Logo" } },
+        "logo_4": { "type": "press_logo", "settings": { "name": "Logo" } }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4"],
+      "settings": { "label": "Como visto em" }
+    },
+    "petventra_ambassadors": {
+      "type": "petventra-ambassadors",
+      "blocks": {
+        "amb_1": { "type": "ambassador", "settings": { "role": "Em breve", "name": "Por anunciar" } },
+        "amb_2": { "type": "ambassador", "settings": { "role": "Em breve", "name": "Por anunciar" } },
+        "amb_3": { "type": "ambassador", "settings": { "role": "Em breve", "name": "Por anunciar" } },
+        "amb_4": { "type": "ambassador", "settings": { "role": "Em breve", "name": "Por anunciar" } }
+      },
+      "block_order": ["amb_1", "amb_2", "amb_3", "amb_4"],
+      "settings": { "eyebrow": "Parceiros", "heading": "Embaixadores Petventra" }
+    },
+    "petventra_app_showcase": {
+      "type": "petventra-app-showcase",
+      "blocks": {
+        "app_feature_1": { "type": "app_feature", "settings": { "icon": "🎚️", "title": "Sensibilidade ao Beep", "text": "Ajusta a sensibilidade do microfone ao temperamento do teu cão." } },
+        "app_feature_2": { "type": "app_feature", "settings": { "icon": "📳", "title": "Modo Vibração", "text": "Alternativa suave e silenciosa ao som." } },
+        "app_feature_3": { "type": "app_feature", "settings": { "icon": "🔋", "title": "Indicador de Bateria", "text": "Vê o nível de carga diretamente no ecrã." } },
+        "app_feature_4": { "type": "app_feature", "settings": { "icon": "🛡️", "title": "Auto-Stop de Segurança", "text": "Interrompe a correção automaticamente para o bem-estar do teu cão." } }
+      },
+      "block_order": ["app_feature_1", "app_feature_2", "app_feature_3", "app_feature_4"],
+      "settings": {
+        "heading": "Ecrã LCD a cores, controlo direto no colar",
+        "intro": "<p>Sem necessidade de app — ajusta o modo e a sensibilidade diretamente no ecrã tátil do colar, com indicador de bateria sempre visível.</p>",
+        "image_url": "https://cdn.shopify.com/s/files/1/0788/9921/6522/files/c223a45a-8a41-42bd-ac0c-f8773c50bb69.jpg?v=1786343676"
+      }
+    },
+    "petventra_specs": {
+      "type": "petventra-specs",
+      "blocks": {
+        "spec_1": { "type": "spec", "settings": { "label": "🔋 Bateria", "value": "Recarregável via USB, autonomia de vários dias por carga" } },
+        "spec_2": { "type": "spec", "settings": { "label": "💧 Resistência à água", "value": "Certificação IP67 — chuva, lama e salpicos" } },
+        "spec_3": { "type": "spec", "settings": { "label": "🎚️ Sensibilidade", "value": "8 níveis ajustáveis ao temperamento do teu cão" } },
+        "spec_4": { "type": "spec", "settings": { "label": "🛑 Auto-Stop", "value": "Paragem automática de segurança para evitar sobre-estimulação" } }
+      },
+      "block_order": ["spec_1", "spec_2", "spec_3", "spec_4"],
+      "settings": {
+        "heading": "Feito para o dia a dia",
+        "intro": "<p>Especificações pensadas para conforto e segurança em qualquer situação.</p>",
+        "image_url": "https://cdn.shopify.com/s/files/1/0788/9921/6522/files/190a7117-130e-4406-bb44-975c6ec22b4e.jpg?v=1786343676"
+      }
+    },
+    "petventra_testimonials": {
+      "type": "petventra-testimonials",
+      "blocks": {
+        "testimonial_1": {
+          "type": "testimonial",
+          "settings": { "quote": "<p>O meu vizinho já não se queixa! O modo vibração foi suficiente para o meu labrador parar de ladrar aos carteiros.</p>", "author": "Marta Oliveira", "rating": 5 }
         },
-        "static-product-card": {
-          "type": "_product-card",
-          "name": "t:names.product_card",
-          "static": true,
-          "settings": {
-            "product_card_gap": 8,
-            "background_color": "",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 8,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_card_gallery_DNizbJ": {
-              "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
-              "settings": {
-                "image_ratio": "adapt",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "",
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_title_M7MJkb": {
-              "type": "product-title",
-              "name": "t:names.product_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 4,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "price_gLWgA6": {
-              "type": "price",
-              "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h6",
-                "width": "100%",
-                "alignment": "left",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "text_color": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_card_gallery_DNizbJ",
-            "product_title_M7MJkb",
-            "price_gLWgA6"
-          ]
+        "testimonial_2": {
+          "type": "testimonial",
+          "settings": { "quote": "<p>Gosto de poder ajustar a sensibilidade — o meu cão é tímido e o modo beep já resolveu o problema.</p>", "author": "Pedro Nogueira", "rating": 5 }
+        },
+        "testimonial_3": {
+          "type": "testimonial",
+          "settings": { "quote": "<p>À prova de água a sério, uso todos os dias mesmo com chuva. A bateria dura semanas.</p>", "author": "Sofia Cardoso", "rating": 4 }
         }
       },
-      "block_order": [
-        "text_cbcgyb"
-      ],
-      "name": "t:names.product_recommendations",
-      "settings": {
-        "product": "{{ closest.product }}",
-        "recommendation_type": "related",
-        "layout_type": "grid",
-        "carousel_on_mobile": false,
-        "max_products": 4,
-        "columns": 4,
-        "mobile_columns": "2",
-        "columns_gap": 12,
-        "rows_gap": 24,
-        "icons_style": "arrow",
-        "icons_shape": "none",
-        "section_width": "page-width",
-        "gap": 28,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
+      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3"],
+      "settings": { "heading": "O que dizem os donos de cães" }
+    },
+    "petventra_newsletter": {
+      "type": "petventra-newsletter",
+      "settings": {}
+    },
+    "petventra_color_tiles": {
+      "type": "petventra-color-tiles",
+      "blocks": {
+        "tile_black": {
+          "type": "tile",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0788/9921/6522/files/55dfeeed-a10d-484c-96e0-5bd9dc6caa84.jpg?v=1786343676",
+            "eyebrow": "Disponível em",
+            "name": "Preto",
+            "tile_color": "#E7E7EC",
+            "cta_label": "Comprar Preto",
+            "cta_link": "/products/smart-automatic-anti-barking-dog-collar-rechargeable-bark-stopper-stop-barking-hd-digital-display-ip67-waterproof-collar-for-dogs-pet-products?variant=49897256616074"
+          }
+        },
+        "tile_white": {
+          "type": "tile",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0788/9921/6522/files/0a0838f2-8a6b-472c-815e-9ad4eba8ecea.jpg?v=1786343676",
+            "eyebrow": "Disponível em",
+            "name": "Branco",
+            "tile_color": "#F4F1EA",
+            "cta_label": "Comprar Branco",
+            "cta_link": "/products/smart-automatic-anti-barking-dog-collar-rechargeable-bark-stopper-stop-barking-hd-digital-display-ip67-waterproof-collar-for-dogs-pet-products?variant=49897256681610"
+          }
+        }
+      },
+      "block_order": ["tile_black", "tile_white"],
+      "settings": {}
+    },
+    "petventra_faq": {
+      "type": "petventra-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": { "question": "A coleira é segura para o meu cão?", "answer": "<p>Sim. Tem paragem automática de segurança (auto-stop) que desliga a correção caso o cão ladre continuamente, evitando sobre-estimulação.</p>" }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": { "question": "Quais os modos disponíveis?", "answer": "<p>3 modos combináveis: som (beep), vibração e impulso estático de baixa intensidade, com 8 níveis de sensibilidade ajustáveis.</p>" }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": { "question": "É resistente à água?", "answer": "<p>Sim, tem certificação IP67 — resistente a chuva, lama e salpicos.</p>" }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": { "question": "Quanto tempo dura a bateria?", "answer": "<p>É recarregável via USB e a bateria dura vários dias com uso diário normal.</p>" }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": { "question": "Serve para o meu tamanho de cão?", "answer": "<p>A coleira é ajustável de 0 a 27 polegadas de perímetro, adequada para cães a partir dos 3,5kg (8lbs) até aos 55kg (120lbs).</p>" }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5"],
+      "settings": { "heading": "Perguntas frequentes" }
     }
   },
   "order": [
     "main",
-    "product_recommendations_qggXJq"
+    "petventra_trust_features",
+    "petventra_final_cta",
+    "petventra_press",
+    "petventra_ambassadors",
+    "petventra_app_showcase",
+    "petventra_specs",
+    "petventra_testimonials",
+    "petventra_newsletter",
+    "petventra_color_tiles",
+    "petventra_faq"
   ]
 }

@@ -1,0 +1,42 @@
+.petventra-press {
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.petventra-press__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #9A9AA5;
+  margin: 0 0 1.5rem;
+}
+
+.petventra-press__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.petventra-press__logo {
+  border: 1px dashed #D5D5DC;
+  border-radius: 10px;
+  width: 160px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.petventra-press__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.petventra-press__placeholder-text {
+  font-size: 0.8rem;
+  color: #C5C5CC;
+  font-weight: 600;
+}

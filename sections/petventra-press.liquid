@@ -1,0 +1,67 @@
+{{ 'petventra-press.css' | asset_url | stylesheet_tag }}
+
+<div class="petventra-press page-width">
+  {% if section.settings.label != blank %}
+    <p class="petventra-press__label">{{ section.settings.label }}</p>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="petventra-press__grid">
+      {% for block in section.blocks %}
+        <div class="petventra-press__logo" {{ block.shopify_attributes }}>
+          {% if block.settings.logo != blank %}
+            {{ block.settings.logo | image_url: width: 320 | image_tag: loading: 'lazy', alt: block.settings.name }}
+          {% else %}
+            <span class="petventra-press__placeholder-text">{{ block.settings.name | default: 'Logo' }}</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Petventra Press",
+  "tag": "section",
+  "class": "petventra-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Como visto em"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "press_logo",
+      "name": "Press logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo (optional — merchant fills in later)"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Placeholder text",
+          "default": "Logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Petventra Press",
+      "blocks": [
+        { "type": "press_logo", "settings": { "name": "Logo" } },
+        { "type": "press_logo", "settings": { "name": "Logo" } },
+        { "type": "press_logo", "settings": { "name": "Logo" } },
+        { "type": "press_logo", "settings": { "name": "Logo" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

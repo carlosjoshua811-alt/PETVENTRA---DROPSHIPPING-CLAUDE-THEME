@@ -1,0 +1,74 @@
+.petventra-ambassadors {
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3rem);
+  text-align: center;
+  background: #FAFAFA;
+}
+
+.petventra-ambassadors__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #4CAF50;
+  margin: 0 0 0.5rem;
+}
+
+.petventra-ambassadors__heading {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #2E2E38;
+  margin: 0 0 2rem;
+}
+
+.petventra-ambassadors__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.petventra-ambassadors__card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px dashed #D5D5DC;
+}
+
+.petventra-ambassadors__photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.petventra-ambassadors__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.petventra-ambassadors__photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #F0F0F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #C5C5CC;
+}
+
+.petventra-ambassadors__role {
+  font-size: 0.78rem;
+  color: #9A9AA5;
+  margin: 0 0 0.25rem;
+}
+
+.petventra-ambassadors__name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2E2E38;
+  margin: 0;
+  font-style: italic;
+}
